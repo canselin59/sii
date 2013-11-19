@@ -1,4 +1,8 @@
-package com.sii.mysii;
+package com.sii.mysii.ui;
+
+import com.sii.mysii.R;
+import com.sii.mysii.R.layout;
+import com.sii.mysii.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
