@@ -15,7 +15,7 @@ import android.os.Bundle;
 /**
  * @author isen
  *
- */
+ */  
 public abstract class LocationTracker {
 
 	private LocationManager locationManagerService;
