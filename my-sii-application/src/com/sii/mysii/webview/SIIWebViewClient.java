@@ -11,21 +11,21 @@ import android.webkit.WebViewClient;
 public class SIIWebViewClient extends WebViewClient {
 	
 	private static final String TAG = "SIIWebViewClient";
-	private ArrayList<String> urlAuthorized;
+	private ArrayList<String> authorizedUrls;
 	
-	public SIIWebViewClient(String... urlAuthorized){
-		this.urlAuthorized = new ArrayList<String>();
-		if( urlAuthorized != null ){
-			for(int i = 0; i < urlAuthorized.length; i++){
-				Log.d(TAG, "Adding ["+urlAuthorized[i]+"] to the list of white listed urls");
-				this.urlAuthorized.add(urlAuthorized[i]);
+	public SIIWebViewClient(String... authorizedUrls){
+		this.authorizedUrls = new ArrayList<String>();
+		if( authorizedUrls != null ){
+			for(int i = 0; i < authorizedUrls.length; i++){
+				Log.d(TAG, "Adding ["+authorizedUrls[i]+"] to the list of white listed urls");
+				this.authorizedUrls.add(authorizedUrls[i]);
 			}
 		}
 	}
 
 	@Override
 	public boolean shouldOverrideUrlLoading(WebView view, String url) {
-		for(String whiteListedUrl : urlAuthorized){
+		for(String whiteListedUrl : authorizedUrls){
 			if(whiteListedUrl.contains(url)){
 				// If the url is whitelisted, load it directly
 				view.loadUrl(url);
