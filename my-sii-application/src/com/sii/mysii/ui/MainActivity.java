@@ -1,12 +1,10 @@
 package com.sii.mysii.ui;
 
-import com.sii.mysii.R;
-import com.sii.mysii.R.layout;
-import com.sii.mysii.R.menu;
-
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+
+import com.sii.mysii.R;
 
 public class MainActivity extends Activity {
 
